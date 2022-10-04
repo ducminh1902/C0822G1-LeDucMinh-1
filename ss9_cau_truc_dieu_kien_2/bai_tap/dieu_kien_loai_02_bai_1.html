@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 1:
+<br>
+<input type="text" id="doC" placeholder="Hãy nhập độ C"> <button type="button" onclick="nhietdo()">Đổi</button>
+<br>
+<input type="text" id="doF" placeholder="Độ F">
+<br>
+<br>
+</body>
+</html>
+<script>
+    //bài 1
+    function nhietdo() {
+        let a =document.getElementById('doC').value;
+        let F = parseFloat(a) * 9/5 +32;
+        document.getElementById('doF').value = F + "Độ  F";
+    }
+</script>

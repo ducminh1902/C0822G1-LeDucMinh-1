@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 10: Viết chương trình tính giá điện
+<br>
+Tiền điện :
+<br>
+0-50kWh = 1.67 đồng /kWh
+<br>
+51-100kWh = 1.60 đồng /kWh
+<br>
+101-200kWh = 2.01 đồng/kWh
+<br>
+201-300kWh = 2.53 đồng/kWh
+<br>
+<input type="text" id="time" placeholder="nhập kWh">
+<br>
+<button type="button" id="ex10" onclick="bai10()">Tính</button>
+<br>
+<input type="text" id="money" placeholder="Số tiền">
+</body>
+</html>
+<script>
+    //bài 10
+    function bai10() {
+        let thoigian = document.getElementById('time').value;
+        if (thoigian<=50){
+            let sotien= parseFloat(thoigian) * 1.67;
+            document.getElementById('money').value = sotien + "nghìn đồng";
+        }else if (thoigian>50 && thoigian<=100){
+            let sotien1= parseFloat(thoigian) * 1.73;
+            document.getElementById('money').value = sotien1 + "nghìn đồng";
+        }else if (thoigian>100 && thoigian<=200){
+            let sotien2= parseFloat(thoigian) * 2.01;
+            document.getElementById('money').value = sotien2 + "nghìn đồng";
+        }else if (thoigian>200 && thoigian<=300){
+            let sotien3= parseFloat(thoigian) * 2.01;
+            document.getElementById('money').value = sotien3 + "nghìn đồng";
+        }
+    }
+</script>

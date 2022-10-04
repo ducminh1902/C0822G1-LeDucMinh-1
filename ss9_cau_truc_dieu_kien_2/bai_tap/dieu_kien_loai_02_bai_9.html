@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 9:Kiểm tra tam giác
+<br>
+<input type="text" id="canha" placeholder="Nhập cạnh a">
+<input type="text" id="canhb" placeholder="Nhập cạnh b">
+<input type="text"id="canhc" placeholder="Nhập cạnh c">
+<br>
+<button type="button" id="123" onclick="checktamgiac()">Check</button>
+<p id="checktamgiac">   </p>
+<br>
+</body>
+</html>
+<script>
+    //bài 9
+    function checktamgiac() {
+        let canha = document.getElementById('canha').value;
+        let canhb =document.getElementById('canhb').value;
+        let canhc =document.getElementById('canhb').value;
+        if (canha>0 && canhb>0 && canhc>0){
+            if (canha + canhb > canhc){
+            }if (canhb + canhc > 0){
+            }if (canha+canhc>canhb){
+                document.getElementById('checktamgiac').innerHTML="Tam giác vuông"
+            }
+        }else {
+            document.getElementById('checktamgiac').innerHTML="Không phải tam giác vuông"
+        }
+    }
+</script>

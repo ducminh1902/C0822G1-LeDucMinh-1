@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành switch case</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //bài 1
+    let browser = prompt("Enter browser name!")
+    switch (browser) {
+        case 'Edgle':
+              alert("you've got the Edgle");
+              break
+        case 'Chrome':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+              alert("Okay we support these browsers too");
+            break;
+        default:
+            alert("We hope that thí page look ok!");
+    }
+</script>
+<script>
+    //bài 2
+    let a = prompt('a?', '');
+      switch (a) {
+          case '0':
+              alert('0');
+              break;
+          case '1':
+              alert('1');
+             break
+          case '2':
+          case '3':
+              alert('a=2,3');
+      }
+</script>
+<script>
+    //bài 3
+    let x =prompt('Nhập 1 số');
+        if(x > 0){
+            alert('1')
+        }else if (x < 0){
+            alert('-1')
+        }else {
+            alert('0')
+        }
+</script>

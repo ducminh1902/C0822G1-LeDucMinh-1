@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 2
+<br>
+<input type="text" id="tuoi" placeholder="Hãy nhập tuổi của bạn">
+<br>
+<button type="button" onclick="bai2()">Check</button>
+<br>
+<p id="222" ></p>
+<br>
+</body>
+</html>\
+<script>
+    function bai2() {
+        let old = document.getElementById('tuoi').value;
+        if (old>=15){
+            document.getElementById('222').innerHTML = "bạn đã đủ tuổi vào lớp 10";
+        }else {
+            document.getElementById('222').innerHTML = "bạn chưa đủ tuổi vào lớp 10";
+        }
+    }
+</script>

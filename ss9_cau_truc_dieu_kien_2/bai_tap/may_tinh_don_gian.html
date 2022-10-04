@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<table >
+     <tr>
+         <td colspan="4"><input type="text" disabled id="windown"> </td>
+     </tr>
+    <tr>
+        <td><button type="button" id="somot" value="1"  onclick="mot()">1</button></td>
+        <td><button type="button" id="sohai" onclick="hai()">2</button></td>
+        <td><button type="button" id="soba" onclick="ba()">3</button></td>
+        <td><button type="button" id="daucong" onclick="cong()">+</button></td>
+    </tr>
+
+    <tr>
+        <td><button type="button" id="sobon" onclick="bon()">4</button></td>
+        <td><button type="button" id="sonam" onclick="nam()">5</button></td>
+        <td><button type="button" id="sosau" onclick="sau()">6</button></td>
+        <td><button type="button" id="dautru"  onclick="tru()">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="sobay" onclick="bay()">7</button></td>
+        <td><button type="button" id="sotam" onclick="tam()">8</button></td>
+        <td><button type="button" id="sochin" onclick="chin()">9</button></td>
+        <td><button type="button" id="daunhan" onclick="nhan()">x</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" id="chuC" onclick="C">C</button></td>
+        <td><button type="button" id="sokhong" onclick="khong()">0</button></td>
+        <td><button type="button" id="daubang" onclick="bang()">=</button></td>
+        <td><button type="button" id="dauchia" onclick="dauchia()">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+   function mot() {
+       let result = document.getElementById('somot').value;
+       console.log(result)
+       document.getElementById('windown').value = parseInt(result) + 1;
+   }
+   function hai() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '2';
+   }
+   function ba() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '3';
+   }
+   function cong() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '+';
+   }
+   function bon() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '4';
+   }
+   function nam() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '5';
+   }
+   function sau() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '6';
+   }
+   function tru() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '-';
+   }function bay() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '7';
+   }
+   function tam() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '8';
+   }
+   function chin() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '9';
+   }
+   function nhan() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '*';
+   }
+   function C() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '   ';
+   }
+   function khong() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '0';
+   }
+   function bang() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = eval(result);
+   }
+   function dauchia() {
+       let result = document.getElementById('windown').value;
+       document.getElementById('windown').value = result + '/';
+   }
+</script>

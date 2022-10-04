@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 6
+<br>
+<input type="text" id="soA" placeholder="Nhập số a">
+<br>
+<input type="text" id="soB" placeholder="Nhập số b">
+<br>
+<br>
+<button type="button" onclick="timnghiem()">Tìm nghiệm</button>
+<br>
+<input type="text" id="nghiem" placeholder="Nghiệm">
+<br>
+<br>
+</body>
+</html>
+<script>
+    // bài 6
+    function timnghiem() {
+        let soA = document.getElementById('soA').value;
+        let soB = document.getElementById('soB').value;
+        if (soA == 0 && soB==0){
+            document.getElementById('nghiem').value = "Vô số nghiệm";
+        }else if (soA !=0 && soB!=0){
+            let nghiem= parseFloat(-soB) / parseFloat(soA);
+            document.getElementById('nghiem').value = nghiem;
+        }else if(soA!=0 && soB == 0){
+            document.getElementById('nghiem').value = "Phương trình có nghiệm x = 0"
+        }else if(soA==0 && soB!=0){
+            document.getElementById('nghiem').value = "Vô nghiệm";
+        }
+    }
+</script>

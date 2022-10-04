@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight
+        }
+        getWeight() {
+            return document.write( "Quả Táo có " + this.weight + " Đơn vị " + "<br>")
+        }
+        getAnTao() {
+            return this.weight--;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true + document.write("Hết Táo Và Ngừng Ăn ");
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert("hết táo");
+            } else {
+                this.weight;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = true;
+            this.weight = weight;
+        }
+        isMale(){
+            if (this.gender == true){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        getWeight() {
+            return document.write("Cân Nặng Của " + this.name +"&nbsp"+ " Còn " + this.weight + " Đơn Vị" + "<br>")
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+        getNoiChuyen(cc) {
+            document.write(this.name + cc + "<br>")
+        }
+
+        getAnTao1(Apple) {
+            return Apple.getAnTao() + this.weight++;
+        }
+
+        getCheckTao() {
+            return this.weight + 10;
+        }
+    }
+
+    let adam = new Human("Adam", true, 65);
+    let eva = new Human("Eva", false, 55);
+    let apple = new Apple(10);
+
+    // adam.getAnTao1(apple);
+    // adam.getNoiChuyen("Ăn táo")
+    // apple.getWeight();
+    // adam.getWeight();
+    // eva.getAnTao1(apple);
+    // eva.getNoiChuyen("Ăn Táo");
+    // apple.getWeight();
+    // eva.getWeight();
+    // adam.getAnTao1(apple);
+    // adam.getNoiChuyen("Ăn táo");
+    // apple.getWeight(apple);
+    // adam.getWeight();
+    // eva.getAnTao1(apple);
+    // eva.getNoiChuyen("Ăn Táo");
+    // apple.getWeight();
+    // eva.getWeight();
+    // adam.getAnTao1(apple);
+    // adam.getNoiChuyen("Ăn táo")
+    // apple.getWeight();
+    // adam.getWeight();
+    // eva.getAnTao1(apple);
+    // eva.getNoiChuyen("Ăn Táo");
+    // apple.getWeight();
+    // eva.getWeight();
+    // adam.getAnTao1(apple);
+    // adam.getNoiChuyen("Ăn táo")
+    // apple.getWeight();
+    // adam.getWeight();
+    // eva.getAnTao1(apple);
+    // eva.getNoiChuyen("Ăn Táo");
+    // apple.getWeight();
+    // eva.getWeight();
+    // adam.getAnTao1(apple);
+    // adam.getNoiChuyen("Ăn táo")
+    // apple.getWeight();
+    // adam.getWeight();
+    // eva.getAnTao1(apple);
+    // eva.getNoiChuyen("Ăn Táo");
+    // apple.getWeight();
+    // eva.getWeight();
+    // while (){
+    //
+    // }
+
+    while (apple.isEmpty() == false){
+        adam.getAnTao1(apple);
+        adam.getNoiChuyen("Ăn táo")
+        apple.getWeight();
+        adam.getWeight();
+        eva.getAnTao1(apple);
+        eva.getNoiChuyen("Ăn Táo");
+        apple.getWeight();
+        eva.getWeight();
+    }
+
+
+</script>

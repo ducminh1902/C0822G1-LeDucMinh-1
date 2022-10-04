@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = +prompt("nhập độ dài n");
+    let arr =[];
+    for (let i = 0; i <n ; i++) {
+        let element = +prompt("nhập phần tử thứ " + i);
+        arr.push(element);
+    }
+    alert(arr);
+    for (let i = 0; i <arr.length ; i++) {
+        let m = Math.sqrt(arr[i]);
+        if (parseInt(m)=== m){
+            document.write("số chính phương là:" + arr[i] + "<br>");
+        }
+    }
+</script>

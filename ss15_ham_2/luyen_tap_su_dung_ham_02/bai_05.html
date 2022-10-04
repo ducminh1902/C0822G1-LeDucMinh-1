@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let soThuNhat= +prompt("hãy nhập số thứ nhất");
+    let soThuHai= +prompt("hãy nhập số thứ hai");
+    let soThuBa= +prompt("hãy nhập số thứ ba");
+    function soSanh(a,b,c) {
+        if (soThuNhat>soThuHai && soThuHai==soThuBa){
+            return a;
+        } else if (soThuHai>soThuNhat && soThuNhat==soThuBa){
+            return b;
+        }else if (soThuBa>soThuHai && soThuHai==soThuNhat){
+            return c;
+        }
+    }
+    document.write(soSanh(a,b,c)+ "là số lớn nhất");
+</script>

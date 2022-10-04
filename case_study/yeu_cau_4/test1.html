@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("hãy nhập độ dài mảng");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let element = +prompt("hãy nhập phần tử thứ :" + i);
+        array.push(element);
+    }
+    alert(array);
+    let array2 = [];
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 1; j <= array[i]; j++) {
+            if (array[i] % j === 0) {
+                sum += j;
+            }
+        }
+        array2.push(sum);
+        sum = 0;
+    }
+    document.write(array2);
+</script>
+</html>

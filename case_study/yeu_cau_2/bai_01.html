@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mucLuong = +prompt("hãy nhập mức lương của bạn ");
+    if (mucLuong >= 15000000){
+        alert("thuế thu nhập của bạn là 20% :" + mucLuong * 20/100);
+    }else if (mucLuong>=7000000 && mucLuong<150000000){
+        alert("thuế thu nhập của bạn là 10% :"+ mucLuong * 10/100);
+    }else if (mucLuong<7000000){
+        alert("thuế thu nhập của bạn là 5% :"+ mucLuong * 50/100);
+    }
+</script>
+</html>

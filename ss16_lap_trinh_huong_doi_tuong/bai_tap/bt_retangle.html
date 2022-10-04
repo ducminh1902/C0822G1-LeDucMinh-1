@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getArea() {
+            return this.height * this.width;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        display() {
+            var canvas = document.getElementById("DemoCanvas");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'pink';    // color of fill
+                ctx.fillRect(0, 0, this.height, this.width); // create rectangle
+            }
+        }
+    }
+
+    let hcn = new Rectangle(300, 500);
+    let dienTich = hcn.getArea();
+    let chuVi = hcn.getPerimeter();
+    hcn.display();
+    document.write("diện tích " + dienTich);
+    document.write("chu vi : " + chuVi);
+    document.getElementById("DemoCanvas");
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function solution(s1, s2) {
+        let a = s1.split("");
+        let b = s2.split("");
+        let count = 0;
+        for (let i = 0 ; i < a.length; i++) {
+            for (let j = 0 ; j < b.length; j++) {
+                if(a[i] === b[j]){
+                    count++;
+                }
+            }
+
+        }return count;
+    }
+    let s1 = "a,b,c,d";
+    let s2 = "a,b,c,d";
+    alert(count);
+
+</script>

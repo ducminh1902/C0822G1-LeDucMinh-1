@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 2 :
+<input type="text" id="met" placeholder="Mét"><button type="button" onclick="chieudai()">Đổi</button>
+<br>
+<input type="text" id="feet" placeholder="Feet">
+<br>
+<br>
+</body>
+</html>
+<script>
+    //bài 2
+    function chieudai() {
+        let m = document.getElementById('met').value;
+        let f = parseFloat(m) * 3.2808;
+        document.getElementById('feet').value = f + " feet";
+    }
+</script>

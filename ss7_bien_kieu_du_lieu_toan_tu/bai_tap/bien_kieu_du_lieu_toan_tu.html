@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+Bài 1:điểm trung bình
+<br>
+<br>
+<input type="text" id="select 1"> Điểm Vật Lý
+<br>
+<br>
+<input type="text" id="select 2">Điểm Hóa HỌc
+<br>
+<br>
+<input type="text" id="select 3">Điểm Sinh Học
+<br>
+<br>
+<button type="button" onclick="hhh()">Điểm trung bình</button>
+<br>
+<div id="999"></div>
+bài 2 : Độ C sang F
+<br>
+<input type="text" id="C"> Độ C
+<br>
+<button type="button" onclick="kkk()">Đổi</button>
+<div id="aaa"></div>
+<br>
+<br>
+bài 3 : Diện tích hình tròn
+<br>
+<br>
+<input type="text" id="bai33">Bán kính
+<br>
+<button type="button"  onclick="bai3()">Diện tích</button>
+<div id="dientich"></div>
+<br>
+<br>
+bài 4 : Chu vi hình tròn
+<br>
+<br>
+<input type="text" id="bankinhhinhtron">Bán kính
+<br>
+<button type="button" onclick="bai4()">Chu Vi </button>
+<div id="bai4"></div>
+</body>
+</html>
+<script>
+    //bài 1
+    function hhh() {
+       let a=document.getElementById('select 1').value;
+        let b=document.getElementById('select 2').value;
+        let c=document.getElementById('select 3').value;
+        let x = (parseFloat(a)+parseFloat(b)+parseFloat(c))/3;
+      // document.getElementById('(select 1+select 2+select 3)/3');
+       // document.write(x);
+        document.getElementById('999').innerHTML = "Điểm trung bình :"+x;
+    }
+</script>
+<script>
+    //bài 2
+    function kkk() {
+     let e=document.getElementById('C').value;
+     let Do = 9/5 * parseFloat(e) +32
+        document.getElementById('aaa').innerHTML = "Độ f : "+Do;
+    }
+</script>
+<script>
+    function bai3() {
+        let bankinh = document.getElementById('bai33').value;
+        let dientich = parseFloat(bankinh) * parseFloat(bankinh) *3.14
+        document.getElementById('dientich').innerHTML = "Diện tích hình tròn là : "+ dientich;
+    }
+</script>
+<script>
+    //bài 4
+    function bai4() {
+    let bankinh = document.getElementById('bankinhhinhtron').value;
+    let chuvi = parseFloat(bankinh) * 2 * 3.14;
+    document.getElementById('bai4').innerHTML = chuvi;
+    }
+</script>
+

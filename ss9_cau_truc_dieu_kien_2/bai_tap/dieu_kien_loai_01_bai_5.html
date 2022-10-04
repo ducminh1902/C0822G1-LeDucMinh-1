@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 5
+<br>
+<input type="text" id="ktra" placeholder="Điểm kiểm tra">
+<br>
+<input type="text" id="giuaki" placeholder="Điểm thi giữa kì">
+<br>
+<input type="text" id="cuoiki" placeholder="Điểm thi cuối giữa kì">
+<br>
+<button type="button" id="bai5" onclick="bai5()">Xếp loại</button>
+<br>
+<p id="xeploai"></p>
+<br>
+
+</body>
+</html>
+<script>
+    //bài 5
+    function bai5() {
+        let ktra = document.getElementById('ktra').value;
+        let giuaki = document.getElementById('giuaki').value;
+        let cuoiki = document.getElementById('cuoiki').value;
+        let xeploai = parseFloat(ktra)/3 + parseFloat(giuaki)/3 + parseFloat(cuoiki)/3;
+        if (xeploai >=8.0){
+            document.getElementById('xeploai').innerHTML="học sinh giỏi";
+        }else if (xeploai >=6.5 && xeploai < 8.0){
+            document.getElementById('xeploai').innerHTML="học sinh khá";
+        }else if (xeploai>4.0 && xeploai<= 6.0){
+            document.getElementById('xeploai').innerHTML="học sinh trung bình";
+        }else if (xeploai<=3.0){
+            document.getElementById('xeploai').innerHTML="học sinh yếu";
+        }
+    }
+</script>

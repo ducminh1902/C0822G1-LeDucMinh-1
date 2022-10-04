@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let theNumber = [23, 45, 50, 65, 92, 81, 75];
+    let max = theNumber[0];
+    let viTri = theNumber[0];
+    for (let i = 0; i < theNumber.length; i++) {
+        if (theNumber[i] > max) {
+            max = theNumber[i]
+            viTri = [i]
+        }
+    }
+    document.write("số lớn nhất :" + max + "<br>");
+    document.write("ví trí :" + viTri);
+
+    // var  numbers = [53, 4558 , 4120 , -2165 , 2528 , 4500 , 3454, -4354354];
+    // var maxInNumbers = Math.max.apply(Math, numbers);
+    // document.write("Giá trị lớn nhất là " +maxInNumbers+ "<br/>");
+
+</script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="nhập id">
+<input type="text" id="name" placeholder="nhập tên">
+<input type="text" id="email" placeholder="nhập email">
+<button type="button" onclick="addStudent()">Add Student</button>
+<p id="display"></p>
+</body>
+<script>
+   class Student{
+       constructor(id,name,email) {
+           this.id = id;
+           this.name = name;
+           this.email = email;
+       }
+       setId(id){
+           this.id=id;
+       }
+       setName(){
+           this.name = name;
+       }
+       setEmail(){
+           this.email = email;
+       }
+       getId(){
+           return this.id;
+       }
+       getName(){
+           return this.name;
+       }
+       getEmail(){
+           return this.email;
+       }
+   }
+   let studentList = [];
+   let student1 = new Student(1,"minh","minhld@gmail.com");
+   let student2 = new Student(2,"minh2","minhld@gmail.com");
+   let student3 = new Student(3,"minh3","minhld@gmail.com");
+   studentList.push(student1,student2,student3);
+   disPlay(studentList);
+   function addStudent() {
+       let id = document.getElementById("id").value;
+       let name = document.getElementById("name").value;
+       let email = document.getElementById("email").value;
+       let student = new Student(id,name,email);
+       studentList.push(student);
+       document.getElementById("id").value="";
+       document.getElementById("name").value="";
+       document.getElementById("email").value="";
+       disPlay(studentList);
+   }
+   function deleteStudent(id) {
+       let conf = confirm("bạn có muốn xóa");
+       if (conf){
+           studentList.splice(id,1);
+       }
+       disPlay(studentList);
+   }
+   function disPlay(list) {
+           let data= '<table border="1" style="border-collapse: collapse">\n' +
+               '    <tr>\n' +
+               '        <th>stt</th>\n' +
+               '        <th>id</th>\n' +
+               '        <th>name</th>\n' +
+               '        <th>email</th>\n' +
+               '    </tr>\n'
+       for (let i = 0; i <list.length ; i++) {
+            data += '<tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+list[i].getId()+'</td>\n' +
+                '        <td>'+list[i].getName()+'</td>\n' +
+                '        <td>'+list[i].getEmail()+'</td>\n' +
+                '        <td><input type="button" value="edit" onclick=""></td>\n' +
+                '        <td><input type="button" value="delete" onclick="deleteStudent('+i+')"></td>\n' +
+                '    </tr>'
+       }
+              data += '</table>';
+       document.getElementById("display").innerHTML = data;
+   }
+
+</script>
+</html>

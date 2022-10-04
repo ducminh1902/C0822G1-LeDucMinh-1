@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="themsanpham" placeholder="hãy nhập tên sản phẩm">
+<button type="button" onclick="themSanPham()">Add</button>
+<p id="hienthi"></p>
+</body>
+<script>
+    let danhSachSanPham = ["iphone", "sony", "samsung"];
+    hienthi();
+
+    function hienthi() {
+        let tableString;
+        tableString = '<table border="1">';
+        for (let i = 0; i < danhSachSanPham.length; i++) {
+            tableString += '<tr>' +
+            '<td>' + danhSachSanPham[i] + '</td>' +
+            '<td><input type="button" onclick="suaSanPham(' + i + ')" value="edit"></td>' +
+            '<td><input type="button" onclick="suaSanPham(' + i + ')" value="delete"></td>' +
+            '</tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("hienthi").innerHTML = tableString;
+    }
+    function themSanPham() {
+            let themSanPham = document.getElementById("themsanpham").value;
+            danhSachSanPham.push(themSanPham);
+            hienthi();
+    }
+    function suaSanPham(i) {
+           let suaSanPham = prompt("bạn mún sưa chứ");
+           danhSachSanPham[i] = suaSanPham;
+           hienthi();
+    }
+
+</script>
+</html>

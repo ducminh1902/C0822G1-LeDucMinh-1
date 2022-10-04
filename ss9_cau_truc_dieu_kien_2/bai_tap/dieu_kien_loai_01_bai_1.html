@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 1
+<br>
+<input type="text" id="nhapA" placeholder="Nhập số a">
+<br>
+<input type="text"id="nhapB" placeholder="Nhập số b">
+<br>
+<button type="button" id="bai1" onclick="bai1()">Kiểm tra</button>
+<p id="111"> </p>
+<br>
+</body>
+</html>
+<script>
+    function bai1() {
+        let a = document.getElementById('nhapA').value;
+        let b = document.getElementById('nhapB').value
+        if (a % b ==0){
+            document.getElementById('111').innerHTML = " a chia hết cho b";
+        }else {
+            document.getElementById('111').innerHTML = " a không chia hết cho b";
+        }
+    }
+</script>

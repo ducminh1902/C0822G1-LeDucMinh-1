@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 7
+<br>
+Tiền cước điện thoại = thời lượng các cuộc gọi(phút) x 600 (đồng)
+<br>
+<input type="text" id="time" placeholder="thời lượng cuộc gọi">
+<br>
+<button type="button" id="777" onclick="tiencuoc()">Tính</button>
+<br>
+<p id="tien" ></p>
+</body>
+</html>
+<script>
+    //bài 7
+    function tiencuoc() {
+        let cuocgoi = document.getElementById('time').value;
+        let tien = parseFloat(cuocgoi)*600;
+        document.getElementById('tien').innerHTML = tien + "nghìn đồng";
+    }
+</script>

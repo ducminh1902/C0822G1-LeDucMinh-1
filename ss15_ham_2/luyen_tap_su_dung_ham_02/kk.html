@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let chuoi = "qwertyuiopasdfghjklzxcvbnm";
+    chuoi = chuoi.split("");
+    function checkString(str) {
+        let arr=[];
+        for (let i = 0; i <str.length ; i++) {
+            if (!number.includes(str[i])&&!chuoi.includes(str[i])){
+                arr.push(str[i])
+            }
+        }
+        return arr;
+    }
+    alert(checkString("155555hhhh@#$"))
+</script>

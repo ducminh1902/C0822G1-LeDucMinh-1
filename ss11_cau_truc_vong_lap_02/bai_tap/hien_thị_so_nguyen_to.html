@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = 2;
+    let number= +prompt('Nhập số lượng số nguyên tô muốn in');
+    let soNguyento = 0;
+    while (soNguyento<= number){
+        let count = 0;
+        for (let i = 1; i <=n ; i++) {
+            if (n%i === 0){
+                count++;
+            }
+        }
+        if (count===2){
+            document.write(n +"<br>");
+            soNguyento++;
+        }n++;
+    }
+</script>

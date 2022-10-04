@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 6: Tính hoa hồng theo doanh số sản phẩm
+<br>
+<input type="text" id="sanpham" placeholder="Số sản phẩm bán được">
+<br><br>
+<button type="button" id="123" onclick="bai6()">Tính hoa hồng</button>
+<br><br>
+<input type="text" id="phantram" placeholder="Phần trăm hoa hồng">
+</body>
+</html>
+<script>
+    function bai6() {
+        let sanpham = document.getElementById('sanpham').value;
+            if (sanpham<=5){
+                document.getElementById('phantram').value= "7% mỗi sản phẩm";
+            }else if (sanpham>5 && sanpham<=15){
+                document.getElementById('phantram').value= "10% mỗi sản phẩm";
+            }else if (sanpham>15 && sanpham<=30){
+                document.getElementById('phantram').value= "13% mỗi sản phẩm";
+            }else if (sanpham>30 && sanpham<=50){
+                document.getElementById('phantram').value= "15% mỗi sản phẩm";
+            }
+    }
+</script>

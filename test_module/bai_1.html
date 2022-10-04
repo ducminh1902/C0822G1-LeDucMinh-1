@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("hãy nhập độ dài mảng <=50");
+    if (n>50){
+        alert("vượt quá số lượng ");
+        alert("yêu cầu thoát và nhập lại ");
+    }
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let element = +prompt("hãy nhập phần tử thứ:" + i);
+        array.push(element);
+    }
+    alert(array);
+    let soLeViTriChan = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 !== 0 && i % 2 === 0) {
+            soLeViTriChan.push(array[i]);
+        }
+    }
+    document.write("Số lẻ ở vị trí chẵn:" + soLeViTriChan + "</br>");
+    let sum = 0;
+    let trungBinhCong = 0;
+    for (let i = 0; i < soLeViTriChan.length; i++) {
+        sum += soLeViTriChan[i];
+        trungBinhCong = sum / soLeViTriChan.length
+    }
+    document.write("Trung Bình Cộng :" + trungBinhCong);
+</script>
+</html>

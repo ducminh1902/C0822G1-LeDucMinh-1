@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class temparature {
+        constructor(c, f, kenvin) {
+            this.c = c;
+            this.f = f;
+            this.kenvin = kenvin;
+        }
+
+        getF() {
+            return this.c * 1 / 9 + 32;
+        }
+
+        getkenvin() {
+            return this.c + 273.15;
+        }
+    }
+
+    let chuyenDoi = new temparature(37);
+    let doF = chuyenDoi.getF();
+    let doKenvin = chuyenDoi.getkenvin()
+    document.write("độ f:" + doF);
+    document.write("<br>");
+    document.write("độ kenvin:" + doKenvin);
+</script>

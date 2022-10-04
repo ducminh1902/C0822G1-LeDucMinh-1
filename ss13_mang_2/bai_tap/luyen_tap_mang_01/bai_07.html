@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let soNhap = +prompt("hãy nhập số bất kỳ");
+    let theNumber = [1, 3, 5, 7, 9];
+    // if (theNumber.includes(soNhap)){
+    //     let theNumber2 = theNumber.splice(soNhap,1);
+    //   document.write(theNumber2);
+    // }
+    for (let i = 0; i < theNumber.length; i++) {
+        if (soNhap == theNumber[i]) {
+            theNumber.splice(i, 1)
+            theNumber.push(0)
+        }
+    }
+    document.write(theNumber)
+
+</script>

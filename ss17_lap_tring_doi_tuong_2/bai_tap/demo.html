@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="themSanPham" placeholder="hãy nhập tên sản phẩm">
+<button type="button" onclick="themSanPham()">add</button>
+<p id="hienthi"></p>
+</body>
+<script>
+let danhSachSanPham =["iphone","sony","nokia","samsung"];
+hienThi();
+function hienThi() {
+        let tableString;
+        tableString = '<table border="1">';
+    for (let i = 0; i < danhSachSanPham.length; i++) {
+     tableString +=    '<tr>'+
+                '<td>' + danhSachSanPham[i]+ '</td>' +
+                '<td><input type="button" onclick="suaSanPham('+i+')" value="edit"></td>' +
+                '<td><input type="button" onclick="xoaSanPham('+i+')" value="delete"></td>' +
+                '</tr>'
+    }
+    tableString += '</table>'
+    document.getElementById("hienthi").innerHTML = tableString;
+}
+function themSanPham() {
+ let themSanPham = document.getElementById("themSanPham").value ;
+ danhSachSanPham.push(themSanPham);
+ hienThi();
+}
+ function suaSanPham(i) {
+     let suaSanPham = prompt("bạn muốn sửa chứ");
+     danhSachSanPham[i] = suaSanPham;
+     hienThi();
+ }
+ function xoaSanPham(i) {
+      let xoaSanPham = confirm("bận chắc chắn muốn xóa???");
+      if (xoaSanPham){
+          danhSachSanPham.splice(i,1);
+          hienThi();
+      }
+
+ }
+</script>
+</html>

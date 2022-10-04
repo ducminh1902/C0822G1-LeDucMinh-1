@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính </title>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<br>
+<br>
+<input type="text" placeholder="Nhập số" id="select1">
+&emsp;
+&emsp;<input type="text" placeholder="Nhập số" id="select2">
+&emsp;
+&emsp;<input type="text" placeholder="Kết quả" id="dapan">
+<br>
+<br>
+<button type="button" onclick="Cong()" >Addition(+)</button>
+&emsp;
+<button type="button" onclick="dautru()" id="-">Subtraction(-)</button>
+&emsp;
+<button type="button" onclick="daunhan()" id="X">Multiplication(X)</button>
+&emsp;
+<button type="button" onclick="dauchia()" id="/">Division(/)</button>
+</body>
+</html>
+<script>
+    function Cong() {
+        let dauVao1 = document.getElementById("select1").value;
+        let dauVao2 = document.getElementById("select2").value;
+        let giaTri = parseInt(dauVao1) + parseInt(dauVao2)
+        document.getElementById("dapan").value =  giaTri;
+    }
+    function dautru() {
+        dauVao1 = document.getElementById("select1").value;
+        dauVao2 = document.getElementById("select2").value;
+        let giaTri2 = parseInt(dauVao1) - parseInt(dauVao2);
+        document.getElementById('dapan').value = giaTri2;
+    }
+    function daunhan() {
+        dauVao1 = document.getElementById("select1").value;
+        dauVao2 = document.getElementById("select2").value;
+        let giaTri3 = parseInt(dauVao1) * parseInt(dauVao2);
+        document.getElementById('dapan').value = giaTri3;
+    }
+    function dauchia() {
+        dauVao1 = document.getElementById("select1").value;
+        dauVao2 = document.getElementById("select2").value;
+        let giaTri4 = parseInt(dauVao1) / parseInt(dauVao2);
+        document.getElementById('dapan').value = giaTri4;
+    }
+
+</script>
+<script>
+    let a = document.getElementById('select 1').value;
+    let b = document.getElementById('select 2').value;
+    let ketqua = parseFloat(a)+parseFloat(b)
+    document.getElementById('+').innerHTML = ketqua;
+</script>

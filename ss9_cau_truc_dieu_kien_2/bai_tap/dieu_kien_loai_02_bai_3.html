@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 3 :Diện tích hình vuông
+<br>
+<input type="text" id="canh" placeholder="Cạnh a"><button type="button" id="123" onclick="dientich()">Diện tích</button>
+<br>
+<input type="text" id="dientich" placeholder="Diện tích">
+<br>
+<br>
+
+</body>
+</html>
+<script>
+    //bài 3
+    function dientich() {
+        let canh = document.getElementById('canh').value;
+        let dt = parseFloat(canh) * parseFloat(canh);
+        document.getElementById('dientich').value = dt + " mét vuông";
+    }
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkNumber(a, b) {
+        let uocSoThuNhat = [];
+        let sum1 = 0;
+        let uocSoThuHai = [];
+        let sum2 = 0;
+        for (let i = 0; i < a; i++) {
+            if (a % i === 0) {
+                uocSoThuNhat.push(i);
+            }
+        }
+        document.write("ước của số thư nhất:" + uocSoThuNhat +"</br>");
+        for (let i = 0; i < uocSoThuNhat.length; i++) {
+            sum1 += uocSoThuNhat[i];
+        }
+        for (let i = 0; i < b; i++) {
+            if (b % i === 0) {
+                uocSoThuHai.push(i);
+            }
+        }
+        document.write("ước của số thứ hai :" + uocSoThuHai +"</br>");
+        for (let i = 0; i < uocSoThuHai.length; i++) {
+            sum2 += uocSoThuHai[i];
+        }
+        let check = true;
+        for (let i = 0; i < a; i++) {
+            for (let j = 0; j < b; j++) {
+                if (sum1 == b && sum2 == a) {
+                    check = true;
+                } else {
+                    check = false;
+                }
+            }
+        }
+        if (check) {
+            document.write("true");
+        } else {
+            document.write("false");
+        }
+    }
+
+    checkNumber(220,284);
+</script>
+</html>

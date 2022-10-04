@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+bài 4
+<br>
+<input type="text" id="number1" placeholder="Hãy nhập số a">
+<br>
+<input type="text" id="number2" placeholder="Hãy nhập số b">
+<br>
+<input type="text"  id="number3" placeholder="Hãy nhập số c">
+<br>
+<button type="button" id="timsolonnhat" onclick="bai4()">Tìm số lớn nhất</button>
+<br>
+<input type="text" id="444">
+<br>
+</body>
+</html>
+<script>
+    //bài 4
+    function bai4() {
+        let so1 = document.getElementById('number1').value;
+        let so2 = document.getElementById('number2').value;
+        let  so3 = document.getElementById('number3').value;
+        if (so1 > so2 && so1 > so3){
+            document.getElementById('444').value = "số a lớn nhất";
+        } else if (so1 < so2 && so2 > so3){
+            document.getElementById('444').value = "số b lớn nhất";
+        }else if (so3>so1 && so3 > so2){
+            document.getElementById('444').value = "số c lớn nhất";
+        }
+    }
+</script>

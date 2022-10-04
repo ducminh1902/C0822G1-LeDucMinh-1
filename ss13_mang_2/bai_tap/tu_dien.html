@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Tiếng anh : <input type="text" id="222" placeholder="hãy nhập tiếng anh "> <button type="button" id="111" onclick="tudien()">Dịch</button>
+<br>
+ <br>
+Tiếng việt :<input type="text" id="search" placeholder="kết quả">
+</body>
+</html>
+<script>
+   function tudien() {
+       let theWord = document.getElementById('222').value;
+       let english = ["apple","banana","cherry","orange","papaya","peach","coconut"];
+       let vietNam = ["quả táo","quả chuối","quả cherry","quả cam","quả đu đủ","quả đào","quả dừa"];
+       for (let i = 0; i <=english.length ; i++) {
+           if (theWord===english[i]){
+              document.getElementById('search').value =  vietNam[i];
+               break;
+           }else {
+               document.getElementById('search').value = "không hiển thị";
+           }
+       }
+   }
+</script>

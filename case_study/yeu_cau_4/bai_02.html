@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangA = ["c","a","b","1","1","c","a","a","a","a",1];
+    mangA.sort();
+    alert(mangA);
+    for (let i = 0; i <mangA.length ; i++) {
+        if (mangA[i] == mangA[i+1]){
+            mangA.splice(i,1);
+            i--;
+        }
+    }
+    document.write(mangA);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let nhap = prompt();
+    // let arr = nhap.toLowerCase().split(" ");
+    // let newString = "";
+    // for (let i = 0; i <arr.length ; i++) {
+    //     let first = arr[i].substr(0,1);
+    //     let result= first.toUpperCase() + arr[i].substr(1);
+    //     newString += result + " ";
+    // }
+    // document.write(newString)
+   let nhap = prompt("hãy nhập tên");
+   let arr = nhap.toLowerCase().split(" ");
+   let newString = "";
+    for (let i = 0; i <arr.length ; i++) {
+        let first = arr[i].substr(1,0);
+        let result = first.toUpperCase()+arr[i].substr(1);
+        newString += result + " ";
+    }
+document.write(newString);
+</script>
+</html>

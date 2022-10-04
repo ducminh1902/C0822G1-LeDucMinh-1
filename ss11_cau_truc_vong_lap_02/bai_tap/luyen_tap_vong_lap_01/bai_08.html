@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="play()">Chơi</button>
+</body>
+</html>
+<script>
+    function play() {
+        let doanSo;
+        let number = +prompt("Hãy Nhập Số Lớn Nhất !");
+        let soNgauNhien = Math.floor(Math.random() * number);
+        for (let i = 1; i <= 3; i++) {
+            doanSo = +prompt("Hãy Nhập Số Bạn Đoán");
+            if (doanSo === soNgauNhien) {
+                alert("Bạn Đoán Đúng Rồi Nhé");
+                break;
+            } else if (doanSo > soNgauNhien) {
+                alert("Số Bạn Đoán Lớn Hơn");
+            } else {
+                alert("Số Bạn Đoán Nhỏ Hơn");
+            }
+            if (i === 3) {
+                alert("Bạn Hết Số Lần Đoán");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("hãy nhập độ dài");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let element = +prompt("hãy nhập phần tử thứ :" + i);
+        array.push(element);
+    }
+    alert(array);
+    let check = true;
+    for (let i = 1; i <array.length; i++) {
+        if (array[i] % array[i-1] !== 0) {
+            check = false;
+            break;
+        }
+    }
+    document.write(check);
+</script>
+</html>

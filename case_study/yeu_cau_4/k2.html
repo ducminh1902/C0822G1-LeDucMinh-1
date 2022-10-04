@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>stt</th>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+    </tr>
+</table>
+
+</body>
+<script>
+    class Student{
+        constructor(id,name,email) {
+            this.id =id;
+            this.name=name;
+            this.email= email;
+        }
+        setId(id){
+            this.id=id;
+        }
+        setName(name){
+            this.name=name;
+        }
+        setEmail(){
+            this.email= email;
+        }
+        getId(){
+            return this.id;
+        }
+        getName(){
+            return this.name;
+        }
+        getEmail(){
+            return this.email;
+        }
+    }
+    function display(list) {
+           let data = '<table border="1" style="border-collapse: collapse">\n' +
+               '    <tr>\n' +
+               '        <th>stt</th>\n' +
+               '        <th>id</th>\n' +
+               '        <th>name</th>\n' +
+               '        <th>email</th>\n' +
+               '    </tr>\n' +
+
+               '</table>'
+    }
+</script>
+</html>

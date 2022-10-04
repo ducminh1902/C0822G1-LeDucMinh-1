@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let nhap = prompt('Nghề nghiệp hiện tại');
+      if (nhap == 'học sinh' || nhap =='sinh viên'){
+          alert('không cần nộp thuế')
+      }else if (nhap=='đi làm'){
+          let nam = prompt('Số năm làm việc');
+          if (nam<=5){
+              alert('tiền thuế thu nhập cá nhân cảu bạn là :250 ngàn/năm');
+          }else if (nam>5){
+              alert('tiền thuế thu nhập cá nhân cảu bạn là :400 ngàn/năm');
+          }
+      } else if (nhap=='chưa có việc làm'){
+          alert('không cần nộp thuế');
+      }
+</script>

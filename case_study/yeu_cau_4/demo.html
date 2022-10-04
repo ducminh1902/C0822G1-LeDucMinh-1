@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   let n = +prompt("hãy nhập chiều dài mảng");
+   let array = [];
+   for (let i = 0; i <n ; i++) {
+       let element = prompt("hãy nhập phần tử thứ"+i);
+       array.push(element);
+   }
+   alert(array);
+   let count = 0;
+   let soLuongNguyenTo=0;
+   for (let i = 0; i <array.length ; i++) {
+       for (let j = 1; j <=array[i] ; j++) {
+           if (array[i]%j == 0){
+               count++;
+           }
+       }
+       if (count==2){
+           soLuongNguyenTo++;
+       }
+       count=0;
+   }
+   if (soLuongNguyenTo==array.length){
+       document.write("true");
+   }else {
+       document.write("false");
+   }
+</script>
+</html>

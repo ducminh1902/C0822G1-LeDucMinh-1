@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangA = ["a", "a", "b", "c", "c"];
+    let mangB = ["a", "d", "c", "a", "a"];
+    let arr =[]
+    for (let i = 0; i < mangA.length; i++) {
+        for (let j = 0; j <mangB.length ; j++) {
+          if (mangA[i]==mangB[j]){
+              arr.push(mangB[j]);
+              mangB.splice(j,1);
+              break;
+            }
+        }
+    }
+    document.write("có"+ arr.length+ "ký tự chung là:"+ arr);
+
+</script>
+</html>

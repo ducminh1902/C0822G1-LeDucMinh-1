@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 5 :Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+<input type="text" id="canh1" placeholder="Cạnh 1"> <input type="text" id="canh2" placeholder="Cạnh 2">
+<br>
+<button type="button" id="123" onclick="tamgiac()">Diện tích</button> <input type="text" id="tamgiac" placeholder="Diện tích">
+<br>
+<br>
+</body>
+</html>
+<script>
+    //bài 5
+    function tamgiac() {
+        let canh1 = document.getElementById('canh1').value ;
+        let canh2 = document.getElementById('canh2').value;
+        let tamgiac = 1/2 * parseFloat(canh1) * parseFloat(canh2);
+        document.getElementById('tamgiac').value = tamgiac + " mét vuông";
+    }
+</script>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;QUẢN LÍ SÁCH
+<br>
+<br>
+<p id="display"></p>
+<br>
+<button type="button" onclick="addNewBook()">Thêm Sách Mới</button>
+<button type="button" onclick="addOldBook()">Thêm Sách Đã Có</button>
+<button type="button" onclick="addOldBook()">Mượn Sách</button>
+<button type="button" onclick="addOldBook()">Hiển thị Sách nhiều nhất</button>
+<br>
+<br>
+<input type="text" id="id" placeholder="id">
+<input type="text" id="name" placeholder="Tên Sách">
+<input type="text" id="year" placeholder="Năm Xuất Bản">
+<input type="text" id="number" placeholder="Số Quyển">
+<input type="text" id="condition" placeholder="Tình Trạng">
+</body>
+<script>
+    class bookStore {
+        constructor(id, name, year, number, condition) {
+            this.id = id;
+            this.name = name;
+            this.year = year;
+            this.number = number;
+            this.condition = condition;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setYear(year) {
+            this.year = year;
+        }
+
+        setNumber(number) {
+            this.number = number;
+        }
+
+        setCondition(condition) {
+            this.condition = condition;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        getNumber() {
+            return this.number;
+        }
+
+        getCondition() {
+            return this.condition;
+        }
+    }
+
+    let bookList = [];
+    let book1 = new bookStore(12345, "Toán", 2000, 3, true);
+    let book2 = new bookStore(23456, "Văn", 1998, 4, true);
+    let book3 = new bookStore(37456, "Tiếng Anh", 1999, 5, false);
+    bookList.push(book1, book2, book3);
+    display(bookList);
+
+    function addNewBook() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let year = document.getElementById("year").value;
+        let number = document.getElementById("number").value;
+        let condition = document.getElementById("condition").value;
+        let book = new bookStore(id, name, year, number, condition)
+        bookList.push(book);
+        display(bookList);
+    }
+
+    function addOldBook(id) {
+        let chonSach = +prompt("hãy nhập id sách ");
+        let soLuong = +prompt("số Lượng muốn đổi")
+        if (chonSach == id) {
+            number.splice(id, 1, soLuong);
+            display(bookList);
+        }
+    }
+    function hienThiSachNhieuNhat() {
+           let max = 0;
+    }
+
+    function display(list) {
+        let data = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>Mã Số Sách</th>\n' +
+            '        <th>Tên Sách</th>\n' +
+            '        <th>Năm Xuất Bản</th>\n' +
+            '        <th>Số Quyển</th>\n' +
+            '        <th>Tình Trạng</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            data += '    <tr>\n' +
+                '        <td>' + list[i].getId() + '</td>\n' +
+                '        <td>' + list[i].getName() + '</td>\n' +
+                '        <td>' + list[i].getYear() + '</td>\n' +
+                '        <td>' + list[i].getNumber() + '</td>\n' +
+                '        <td>' + list[i].getCondition() + '</td>\n' +
+                // '        <td><input type="button" value="add" onclick="deleteStudent(' + i + ')"></td>\n' +
+                '        </tr>';
+        }
+        data += '</table>';
+        document.getElementById("display").innerHTML = data;
+    }
+</script>
+</html>
